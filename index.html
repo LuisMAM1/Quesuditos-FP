@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quesuditos FP - Deditos congelados artesanales</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+    background-color: #fff8f0;
+    color: #333;
+  }
+  header {
+    background-color: #f3c78b;
+    padding: 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0; font-size: 2.5em;
+    color: #5a3e1b;
+  }
+  nav {
+    background-color: #d9a64a;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    display: block;
+  }
+  nav a:hover {
+    background-color: #b88724;
+  }
+  section {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  h2 {
+    text-align: center;
+    color: #a76507;
+    margin-bottom: 30px;
+  }
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+  .producto {
+    background: #fff3e0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #e0c998;
+    text-align: center;
+  }
+  .producto img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .producto h3 {
+    color: #7f4b01;
+    margin: 15px 0 10px 0;
+  }
+  .producto p {
+    font-size: 0.9em;
+    color: #5a3e1b;
+  }
+  .precio {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ba7300;
+    margin: 10px 0;
+  }
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #e0c998;
+  }
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #7f4b01;
+  }
+  form input, form textarea, form select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d9a64a;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  form button {
+    background-color: #d9a64a;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  form button:hover {
+    background-color: #b88724;
+  }
+  footer {
+    background-color: #f3c78b;
+    text-align: center;
+    padding: 15px;
+    color: #5a3e1b;
+  }
+  .redes {
+    margin-top: 10px;
+  }
+  .redes a {
+    margin: 0 10px;
+    color: #5a3e1b;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Quesuditos FP</h1>
+  <p>Deditos congelados con sabor artesanal, ahora semiindustrializados</p>
+</header>
+
+<nav>
+  <a href="#productos">Productos</a>
+  <a href="#pedido">Realiza tu pedido</a>
+  <a href="#testimonios">Testimonios</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="productos">
+  <h2>Nuestros Productos</h2>
+  <div class="productos">
+    <div class="producto">
+      <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/cheese-sticks-1239056_1280.jpg" alt="Deditos de queso" />
+      <h3>Deditos de Queso</h3>
+      <p>Bandeja con 20 unidades, sabor inigualable y textura crujiente.</p>
+      <div class="precio">$15.000 COP</div>
+    </div>
+    <div class="producto">
+      <img src="https://cdn.pixabay.com/photo/2017/03/21/13/47/snack-2163207_1280.jpg" alt="Deditos de bocadillo" />
+      <h3>Deditos de Bocadillo</h3>
+      <p>Bandeja con 20 unidades, combinación dulce y salada perfecta.</p>
+      <div class="precio">$15.000 COP</div>
+    </div>
+    <div class="producto">
+      <img src="https://cdn.pixabay.com/photo/2015/05/10/19/33/food-761605_1280.jpg" alt="Deditos mixtos" />
+      <h3>Deditos Mixtos</h3>
+      <p>Bandeja con 20 unidades, mezcla de queso y bocadillo para todos los gustos.</p>
+      <div class="precio">$15.000 COP</div>
+    </div>
+  </div>
+</section>
+
+<section id="pedido">
+  <h2>Realiza tu Pedido</h2>
+  <form action="mailto:quesuditosfp@gmail.com" method="post" enctype="text/plain">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required />
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required />
+
+    <label for="producto">Producto que desea:</label>
+    <select id="producto" name="producto" required>
+      <option value="">Seleccione</option>
+      <option value="deditos_queso">Deditos de Queso</option>
+      <option value="deditos_bocadillo">Deditos de Bocadillo</option>
+      <option value="deditos_mixtos">Deditos Mixtos</option>
+    </select>
+
+    <label for="cantidad">Cantidad de bandejas:</label>
+    <input type="number" id="cantidad" name="cantidad" min="1" required />
+
+    <label for="direccion">Dirección de entrega:</label>
+    <textarea id="direccion" name="direccion" rows="3" required></textarea>
+
+    <button type="submit">Enviar Pedido</button>
+  </form>
+</section>
+
+<section id="testimonios">
+  <h2>Testimonios</h2>
+  <p>"Los mejores deditos que he probado, calidad insuperable y excelente atención." - María G.</p>
+  <p>"El sabor auténtico y la presentación son perfectos para mis eventos familiares." - Juan P.</p>
+  <p>"Recomiendo Quesuditos FP para quienes buscan productos frescos y confiables." - Laura M.</p>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>Correo electrónico: <a href="mailto:quesuditosfp@gmail.com">quesuditosfp@gmail.com</a></p>
+  <p>Teléfono: +57 320 955 1184</p>
+  <p>Dirección: Calle 10 #15-20, Sincelejo, Sucre, Colombia</p>
+  <div class="redes">
+    <a href="https://www.facebook.com/quesuditosfp" target="_blank">Facebook</a> |
+    <a href="https://www.instagram.com/quesuditosfp" target="_blank">Instagram</a> |
+    <a href="https://wa.me/573209551184" target="_blank">WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Quesuditos FP - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
+
